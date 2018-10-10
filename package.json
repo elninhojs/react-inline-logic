@@ -1,0 +1,46 @@
+{
+  "name": "react-inline-logic",
+  "version": "0.0.4",
+  "description": "This component encapsulates some opperations as if, while and for to be used as one Tag inside JSX to compose some logical expression inline.",
+  "main": "demo.js",
+  "keywords": [
+    "inline",
+    "logic",
+    "react",
+    "inline",
+    "logic",
+    "react-inline-logic",
+    "react",
+    "if",
+    "react",
+    "while",
+    "react",
+    "for"
+  ],
+  "dependencies": {
+    "jest-cli": "23.2.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start --allowSyntheticDefaultImports",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --watchAll",
+    "coverage": "react-scripts test --env=jsdom --watchAll --coverage",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "jest-enzyme": "6.0.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "cjs/react-inline-logic.jsx",
+      "!<rootDir>/node_modules/"
+    ]
+  },
+  "author": "eugenio.filho",
+  "license": "MIT"
+}
