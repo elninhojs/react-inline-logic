@@ -92,7 +92,80 @@ const MyConditionalDiv = ({visible=true})=>(<div>
 
 ```
 
+#### For, Repeat and Loop
+```javascript
+...
+//using render method
+//this pseudo code will render one select with tree different options.
+render(){
+    let list = [{id:'au', value:'Australia', text:'AUS'},{id:'br', value:'Brazil', text:'BRZ'},{id:'nz', value:'New Zeland', text:'NZL'}];
 
+    return (<select>
+        <For list={list} onLoop={(item, index)=>(
+            <option key={item.id} value={item.id}>{item.value}</option>
+        )}/>
+        </select>);
+}
+```
+
+```javascript
+...
+//functional component
+//this pseudo code will render one select with tree different options.
+const MySelectDemo = ({list=[]})=>(
+    <select>
+        <For list={list} onLoop={(item, index)=>(
+            <option key={item.id} value={item.id}>{item.value}</option>
+        )}/>
+    </select>
+);
+```
+
+```javascript
+...
+//breaking the loop using onLoopBreakIf method.
+render(){
+    let list = [{id:'au', value:'Australia', text:'AUS'},{id:'br', value:'Brazil', text:'BRZ'},{id:'nz', value:'New Zeland', text:'NZL'}];
+
+    return (<select>
+        <For list={list} onLoop={(item, index)=>(
+            <option key={item.id} value={item.id}>{item.value}</option>
+        )} onLoopBreakIf={(item, index)=>item.id==='br'}/>
+        </select>);
+}
+```
+
+```javascript
+...
+//continuing the loop using onLoopContinueIf method.
+//the pseudo code will render just the first and last option.
+render(){
+    let list = [{id:'au', value:'Australia', text:'AUS'},{id:'br', value:'Brazil', text:'BRZ'},{id:'nz', value:'New Zeland', text:'NZL'}];
+
+    return (<select>
+        <For list={list} onLoop={(item, index)=>(
+            <option key={item.id} value={item.id}>{item.value}</option>
+        )} onLoopContinueIf={(item, index)=>item.id==='br'}/>
+        </select>);
+}
+```
+
+```javascript
+...
+//Using onLoopComplete to count the results for instance
+render(){
+    let list = [{id:'au', value:'Australia', text:'AUS'},{id:'br', value:'Brazil', text:'BRZ'},{id:'nz', value:'New Zeland', text:'NZL'}];
+
+    return (<select>
+        <For list={list} onLoop={(item, index)=>(
+            <option key={item.id} value={item.id}>{item.value}</option>
+        )} onLoopComplete={(list, index)=>this.state.optionsCount = index}/>
+        </select>);
+}
+```
+
+#### repo
+https://github.com/elninhojs/react-inline-logic
 
 License
 ----
