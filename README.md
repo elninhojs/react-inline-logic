@@ -163,6 +163,7 @@ render(){
         </select>);
 }
 ```
+`Also You can use the 'For' alias as <Repeat/> or <Loop/>`
 
 #### repo
 https://github.com/elninhojs/react-inline-logic

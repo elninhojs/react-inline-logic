@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme,{ shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { If, Else, IfNot, For, Repeat, Loop, IsTrue, IsFalse } from '../cjs/react-inline-logic';
+import { If, Else, IfNot, For, Repeat, Loop, IsTrue, IsFalse } from './react-inline-logic';
 
 Enzyme.configure({ adapter: new Adapter() });
 
