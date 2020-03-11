@@ -21,18 +21,16 @@
   "scripts": {
     "start": "react-scripts start --allowSyntheticDefaultImports",
     "test": "react-scripts test --env=jsdom --watchAll",
-    "coverage": "react-scripts test --env=jsdom --watchAll --coverage",
-    "prepublish": "tsc"
+    "coverage": "react-scripts test --env=jsdom --watchAll --coverage"
   },
   "devDependencies": {
-    "jest-cli": "23.2.0",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
-    "react-scripts": "1.1.1",
-    "babel-cli": "^6.26.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
-    "jest-enzyme": "6.0.1"
+    "jest-cli": "23.2.0",
+    "jest-enzyme": "6.0.1",
+    "react": "16.2.0",
+    "react-dom": "^16.13.0",
+    "react-scripts": "1.1.1"
   },
   "jest": {
     "collectCoverageFrom": [
