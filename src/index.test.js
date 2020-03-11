@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme,{ shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { If, Else, IfNot, For, Repeat, Loop, IsTrue, IsFalse } from './react-inline-logic';
+import { If, Else, IfNot, For, Repeat, Loop, IsTrue, IsFalse } from '../lib/index';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -48,6 +48,7 @@ describe('If test cases', () => {
         <div className="inner-if-div"/>
       </If>
     );
+
   expect(vdom.find('div').length).toEqual(1);
   expect(vdom2.find('div').length).toEqual(0);
   

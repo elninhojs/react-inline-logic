@@ -2,7 +2,7 @@
   "name": "react-inline-logic",
   "version": "0.0.9",
   "description": "This component encapsulates some opperations as if, while and for to be used as one Tag inside JSX to compose some logical expression inline.",
-  "main": "./lib/react-inline-logic.js",
+  "main": "./lib/index.js",
   "keywords": [
     "inline",
     "logic",
@@ -17,38 +17,26 @@
     "react",
     "for"
   ],
-  "dependencies": {
-    "jest-cli": "23.2.0",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
-    "react-scripts": "1.1.1"
-  },
+  "dependencies": {},
   "scripts": {
     "start": "react-scripts start --allowSyntheticDefaultImports",
     "test": "react-scripts test --env=jsdom --watchAll",
     "coverage": "react-scripts test --env=jsdom --watchAll --coverage",
-    "eject": "react-scripts eject",
-    "compile": "webpack",
-    "min": "minify lib/react-inline-logic.js --out-file lib/react-inline-logic.min.js --mangle.keepClassName --deadcode.keepFnArgs"
+    "prepublish": "tsc"
   },
   "devDependencies": {
+    "jest-cli": "23.2.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-scripts": "1.1.1",
     "babel-cli": "^6.26.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
-    "jest-enzyme": "6.0.1",
-    "babel-core": "^6.21.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "path": "^0.12.7",
-    "prop-types": "^15.6.0",
-    "webpack": "4.20.2",
-    "webpack-cli": "3.1.1"
+    "jest-enzyme": "6.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/react-inline-logic.js",
+      "lib/index.js",
       "!<rootDir>/node_modules/"
     ]
   },

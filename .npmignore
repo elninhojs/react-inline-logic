@@ -1,6 +1,5 @@
 src
 demo
-.babelrc
-webpack.config.js
 coverage
+node_modules
 cjs
