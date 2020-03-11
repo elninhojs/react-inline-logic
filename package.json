@@ -23,6 +23,10 @@
     "test": "react-scripts test --env=jsdom --watchAll",
     "coverage": "react-scripts test --env=jsdom --watchAll --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elninhojs/react-inline-logic.git"
+  },
   "devDependencies": {
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
