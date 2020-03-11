@@ -1,7 +1,8 @@
 import React from 'react';
-import Enzyme,{ shallow, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import { If, Else, IfNot, For, Repeat, Loop, IsTrue, IsFalse } from '../lib/index';
+const Enzyme = require('enzyme');
+const { shallow, mount } = Enzyme;
+const Adapter = require('enzyme-adapter-react-16');
+const { If, Else, IfNot, For, Repeat, Loop, IsTrue, IsFalse } = require('../lib/index');
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -76,11 +77,10 @@ describe('If test cases', () => {
  describe('For test cases', () => {
   it('<For/> should render elements calling the onLoop method correctly', () => {
     let list = [{id:1, value:'uno'}, {id:2, value:'dos'}];
-    const dom = mount(
-      <For list={list} onLoop={(item)=>
-        <div key={item.id} className={item.value} id={item.id}>{item.value}</div>
-      }/>
-    );
+    const dom = mount(<For list={list} onLoop={(item)=>
+          <div key={item.id} className={item.value} id={item.id}>{item.value}</div>
+        }/>
+      );
     
     expect(dom.find('div').length).toEqual(2);
     expect(dom.find('div.uno').length).toEqual(1);
